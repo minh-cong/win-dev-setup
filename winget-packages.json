@@ -1,0 +1,24 @@
+{
+  "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+  "CreationDate": "2025-09-03T00:00:00Z",
+  "Sources": [
+    {
+      "SourceDetails": { "Name": "winget" },
+      "Packages": [
+        { "PackageIdentifier": "Microsoft.PowerShell" },
+        { "PackageIdentifier": "Microsoft.WindowsTerminal" },
+        { "PackageIdentifier": "Git.Git" },
+        { "PackageIdentifier": "GitHub.cli" },
+        { "PackageIdentifier": "JanDeDobbeleer.OhMyPosh" },
+        { "PackageIdentifier": "Microsoft.VisualStudioCode" },
+        { "PackageIdentifier": "Volta.Volta" },
+        { "PackageIdentifier": "7zip.7zip" },
+        { "PackageIdentifier": "Microsoft.PowerToys" },
+        { "PackageIdentifier": "Docker.DockerDesktop" },
+        { "PackageIdentifier": "PostgreSQL.PostgreSQL.16" },
+        { "PackageIdentifier": "Python.Python.3.12" },
+        { "PackageIdentifier": "RubyInstallerTeam.RubyWithDevKit.3.1" }
+      ]
+    }
+  ]
+}
