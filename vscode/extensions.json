@@ -1,0 +1,21 @@
+{
+  "recommendations": [
+    "ms-vscode.powershell",
+    "ms-vscode.remote-repositories",
+    "ms-vscode-remote.remote-wsl",
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-toolsai.jupyter",
+    "streetsidesoftware.code-spell-checker",
+    "bradlc.vscode-tailwindcss",
+    "ms-vscode.vscode-typescript-next",
+    "github.copilot",
+    "github.copilot-chat",
+    "eamodio.gitlens",
+    "pkief.material-icon-theme",
+    "zhuangtongfa.material-theme"
+  ]
+}
