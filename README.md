@@ -1,43 +1,43 @@
-# Windows Dev Setup
+# windows dev setup
 
 > Comprehensive Windows 11 development environment setup guide and scripts. Inspired by Nicolas Hery's `mac-dev-setup`, optimized for Windows with **winget**, **PowerShell 7**, **Windows Terminal**, **WSL 2**, **Volta** (Node), **pyenv-win** (Python), and **Docker Desktop**.
 
-## 🚀 Quick Start
+## quick start
 
-1. **Clone this repository:**
+1. **clone this repository:**
    ```powershell
    git clone https://github.com/minh-cong/win-dev-setup.git
    cd win-dev-setup
    ```
 
-2. **Run the setup script:**
+2. **run the setup script:**
    ```powershell
    .\windows-dev-setup.ps1
    ```
 
-3. **Follow the detailed guide:** See [windows_dev_setup_based_on_mac_dev_setup.md](./windows_dev_setup_based_on_mac_dev_setup.md)
+3. **follow the detailed guide:** See [windows_dev_setup_based_on_mac_dev_setup.md](./windows_dev_setup_based_on_mac_dev_setup.md)
 
-## 📋 What's Included
+## what's included
 
-### Core Tools
+### core tools
 - **Package Manager:** winget
 - **Terminal:** Windows Terminal + PowerShell 7 + Oh-My-Posh
 - **Version Control:** Git + GitHub CLI
 - **Editor:** VS Code with essential extensions
 - **Containers:** Docker Desktop with WSL 2 backend
 
-### Development Runtimes
+### development runtimes
 - **JavaScript/TypeScript:** Volta (Node.js version manager)
 - **Python:** pyenv-win or WSL-based pyenv
 - **Ruby:** Ruby Installer or WSL-based rbenv
 
-### Development Databases
+### development databases
 - PostgreSQL
 - Redis
 - Elasticsearch
 - MongoDB
 
-## 📁 Repository Structure
+## repository structure
 
 ```
 win-dev-setup/
@@ -56,26 +56,26 @@ win-dev-setup/
 └── wsl-setup.sh                               # Ubuntu WSL configuration
 ```
 
-## 🛠 Manual Setup Steps
+## manual setup steps
 
-### 1. System Updates
+### 1. system updates
 ```powershell
 # Windows Update: Settings → Windows Update → Check for updates
 # Microsoft Store → Library → Get updates
 ```
 
-### 2. Package Installation
+### 2. package installation
 ```powershell
 winget source update
 winget import -i .\winget-packages.json --accept-source-agreements --accept-package-agreements --silent
 ```
 
-### 3. Terminal Configuration
+### 3. terminal configuration
 - Install Nerd Fonts: `.\scripts\install-fonts.ps1`
 - Configure Windows Terminal with Cascadia Code NF
 - Set PowerShell 7 as default profile
 
-### 4. Git Configuration
+### 4. git configuration
 ```powershell
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
@@ -83,14 +83,14 @@ git config --global init.defaultBranch main
 git config --global credential.helper manager
 ```
 
-### 5. SSH Key Setup
+### 5. ssh key setup
 ```powershell
 ssh-keygen -t ed25519 -C "you@example.com"
 Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
 # Add the key to GitHub/GitLab
 ```
 
-### 6. WSL 2 Setup (Recommended)
+### 6. wsl 2 setup (recommmended)
 ```powershell
 .\scripts\setup-wsl.ps1
 # After restart, run in WSL:
@@ -98,13 +98,13 @@ chmod +x wsl-setup.sh
 ./wsl-setup.sh
 ```
 
-### 7. Development Databases
+### 7. development databases
 ```powershell
 cd dev-dbs
 docker compose up -d
 ```
 
-## 🔧 VS Code Configuration
+## vs code configs
 
 Copy the provided VS Code settings:
 ```powershell
@@ -121,7 +121,7 @@ Install recommended extensions:
 Get-Content "vscode\extensions.json" | ConvertFrom-Json | Select-Object -ExpandProperty recommendations | ForEach-Object { code --install-extension $_ }
 ```
 
-## 🐍 Python Setup Options
+## python setup options
 
 ### Option 1: Windows Native (pyenv-win)
 ```powershell
@@ -158,7 +158,7 @@ docker compose up -d
 # MongoDB: localhost:27017, user: dev_user, password: dev_password
 ```
 
-## 🚨 Troubleshooting
+## troubleshooting
 
 ### winget import fails
 - Ensure you have the latest App Installer from Microsoft Store
@@ -180,7 +180,7 @@ docker compose up -d
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 ```
 
-## 📚 Additional Resources
+## additional Resources
 
 - [Windows Terminal Documentation](https://docs.microsoft.com/en-us/windows/terminal/)
 - [WSL 2 Documentation](https://docs.microsoft.com/en-us/windows/wsl/)
@@ -188,15 +188,15 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 - [Volta Documentation](https://volta.sh/)
 - [pyenv-win](https://github.com/pyenv-win/pyenv-win)
 
-## 🤝 Contributing
+## contributing
 
 Feel free to submit issues and enhancement requests! This setup is meant to be a solid foundation that can be customized for different development workflows.
 
-## 📄 License
+## license
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## acknowledgments
 
 - Inspired by [mac-dev-setup](https://github.com/nicolashery/mac-dev-setup) by Nicolas Hery
 - Windows Terminal and PowerShell teams at Microsoft
