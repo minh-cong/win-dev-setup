@@ -139,13 +139,13 @@ pyenv install 3.12.5
 pyenv global 3.12.5
 ```
 
-## 📦 Node.js Setup with Volta
+## node.js setup with volta
 ```powershell
 volta install node@lts
 volta install npm yarn pnpm
 ```
 
-## 🗃 Database Quick Start
+## database quick start
 ```powershell
 # Start all development databases
 cd dev-dbs
@@ -175,7 +175,7 @@ docker compose up -d
 - Enable WSL 2 backend in Docker Desktop settings
 - Enable integration with your Ubuntu distribution
 
-### PowerShell execution policy
+### powershell execution policy
 ```powershell
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
 ```
